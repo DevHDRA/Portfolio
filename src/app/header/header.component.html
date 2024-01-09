@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="solid-separator"></div>
+    <div class="flex flex-row justify-evenly h-60 items-center mx-8 md:mx-0">
+        <div class="header-container">
+            <p class="name font-raleway">Hector David Rodriguez Aguilar</p>
+            <p class="title font-raleway">Software Engineer</p>
+            <p class="exp font-raleway"><span>4 Years</span> of experience</p>
+            <div class="flex flex-row mt-2">
+                <div class="relative">
+                    <button (click)="openGithub()" class="has-tooltip bg-lightGreen rounded h-8 w-10 flex justify-center items-center mx-1 hover:bg-darkGreen transition duration-300 ease-in-out">
+                        <img class="h-6 w-6" src="assets/github.svg" alt="GitHub" />
+                        <span class='tooltip opacity-80 rounded bg-lightGreen p-1 font-semibold text-sm mt-16'>GitHub</span>
+                    </button>
+                </div>
+                <div class="relative">
+                    <button (click)="openLinkedin()" class="has-tooltip bg-lightGreen rounded h-8 w-10 flex justify-center items-center mx-1 hover:bg-darkGreen transition duration-300 ease-in-out">
+                        <img class="h-6 w-6" src="assets/linkedin-tile.svg" alt="Descripción del ícono" />
+                        <span class='tooltip opacity-80 rounded bg-lightGreen p-1 font-semibold text-sm mt-16'>Linkedin</span>
+                    </button>
+                </div>
+                <div class="relative">
+                    <button (click)="openResume()" class="has-tooltip bg-lightGreen rounded h-8 w-10 flex justify-center items-center mx-1 hover:bg-darkGreen transition duration-300 ease-in-out">
+                        <img class="h-6 w-6" src="assets/cv.svg" alt="Descripción del ícono" />
+                        <span class='tooltip opacity-80 rounded bg-lightGreen p-1 font-semibold text-sm mt-16 w-24'>Download CV</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-image">
+            <img src="https://dealingwithdevelop-media.s3.amazonaws.com/portfolio-projects/profile-image.jpeg" priority>
+        </div>
+    </div>
+    <div class="separator bg-lightGreen h-8 w-auto"></div>
+</div>

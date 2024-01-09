@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.solid-separator {
+    @apply bg-lightGreen h-8 w-full
+}
+
+.separator {
+    @apply bg-lightGreen h-1 w-11/12 mx-auto my-8
+}
+
+.tooltip {
+    @apply invisible absolute;
+  }
+  
+.has-tooltip:hover .tooltip {
+    @apply visible z-50;
+}

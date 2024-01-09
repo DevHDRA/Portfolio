@@ -1,0 +1,11 @@
+.layout {
+    @apply max-w-2xl mx-auto my-8 mx-4 md:mx-auto
+}
+
+.title {
+    @apply text-2xl font-semibold w-64 text-darkGreen mb-4
+}
+
+.content {
+    @apply px-6 flex flex-wrap
+}

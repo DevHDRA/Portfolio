@@ -1,0 +1,24 @@
+<div class="flex flex-row border-4 rounded-xl border-beige hover:bg-beige transition duration-300 ease-in-out">
+    <div class="flex-col w-3/4 p-4">
+        <h1 class="font-raleway font-bold text-2xl text-darkGreen">{{ repoData.name }}</h1>
+        <p class="font-raleway font-regular text-regular sm:text-lg"><span class="font-semibold">Language: </span>{{ repoData.language }}</p>
+        <p>{{ repoData.description }}</p>
+        <div class="flex flex-row justify-between mt-2">
+            <div class="sm:flex flex-col hidden">
+                <p><span class="font-semibold">Created at: </span>{{ repoData.created_at }}</p>
+                <p><span class="font-semibold">Updated at: </span>{{ repoData.updated_at }}</p>
+            </div>
+            <div class="flex">
+                <button (click)="showDetails()" class="flex justify-center bg-darkGreen hover:bg-lightGreen transition duration-300 ease-in-out rounded h-8 w-24 flex justify-center items-center mx-1">
+                    <p class="font-raleway font-bold text-white mx-1">Details</p>
+                </button>
+                <button (click)="(openRepo(repoData.html_url))" class="flex justify-center bg-darkGreen hover:bg-lightGreen transition duration-300 ease-in-out rounded h-8 w-24 flex justify-center items-center mx-1">
+                    <p class="font-raleway font-bold text-white mx-1">Code</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="w-1/4 mr-4 sm:mr-0 flex justify-center items-center">
+        <img class="h-24 w-24" src="assets/{{ repoData.language?.toLowerCase() }}.svg" alt="Language" />
+    </div>
+</div>

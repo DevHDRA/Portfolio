@@ -1,0 +1,15 @@
+<div class="flex flex-col">
+    <p class="text-lg font-semibold mb-4 text-center">{{ title }}</p>
+    <div class="flex flex-row flex-wrap justify-center mb-12">
+        <div 
+        class="group relative h-auto w-24 flex flex-col justify-center items-center py-2 text-center"
+        *ngFor="let tech of stackList">
+            <img class="h-12 w-12"[src]="'assets/' + tech.name.toLowerCase() + '.svg'" alt="Javascript" />
+            <span class="group-hover:opacity-90 transition-opacity absolute font-raleway font-bold text-lg min-w-48
+                    opacity-0 my-4 mx-auto bg-darkGreen text-white p-2 rounded z-50"> 
+                <p>{{ tech.name }}</p>
+                <p class="text-sm">Exp: <span class="font-normal">{{ tech.yrs }} Yrs</span></p>
+            </span>
+        </div>
+    </div>
+</div>

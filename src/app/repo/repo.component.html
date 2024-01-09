@@ -1,0 +1,44 @@
+<app-layout [flex]="'flex-col'" [title]="'Repository Details'">
+    <p class="font-raleway font-bold text-xl my-4">Languages</p>
+    <div class="flex flex-col sm:flex-row bg-beige rounded-xl px-8 mb-8 justify-center items-center w-full shadow-2xl"
+        [ngClass]="showError ? 'hidden' : 'flex'">
+       <div class="mx-2">
+            <canvas
+            class="h-32 sm:h-52 w-64 sm:w-80"
+            baseChart
+            [data]="pieChartData"
+            [type]="'pie'"
+            [options]="pieChartOptions"
+            >
+            </canvas>
+       </div>
+        <div class="mx-2 mb-4 sm:mb-0 bg-darkGreen rounded-xl text-white p-4 shadow-lg">
+            <p class="font-raleway"><span>Created at: </span> {{ repo.created_at }}</p>
+            <p class="font-raleway"><span>Updated at: </span> {{ repo.updated_at }}</p>
+        </div>
+    </div>
+    <div class="flex flex-row justify-between mb-8">
+        <button (click)="goRepo(repo.html_url)" class="flex justify-center bg-darkGreen rounded h-8 w-24 flex justify-center items-center mx-1">
+            <p class="font-raleway font-bold text-white mx-1">Code</p>
+        </button>
+    </div>
+    <div class="md">
+        <app-error-message [showError]="showError" />
+        <markdown class="prose lg:prose-xl" [data]="markdown">
+        </markdown>
+    </div>
+
+    <div class="relative opacity-50 hover:opacity-100 transition duration-300 ease-in-out sm:opacity-100">
+        <button 
+            (click)="goBack()" class="has-tooltip z-20 text-white flex flex-col shrink-0 grow-0 justify-around 
+                        fixed top-5 left-5 rounded-lg
+                        mr-1 mb-5 lg:mr-5 lg:mb-5 xl:mr-10 xl:mb-10">
+          <div class="p-3 rounded-full border-4 border-white bg-darkGreen">
+            <img class="h-12 w-12 fill-white" src="assets/back.svg" alt="back" />
+            <span class='tooltip opacity-100 rounded bg-lightGreen p-1 font-semibold text-sm w-20 mr-20'>Go back</span>
+          </div>
+      
+        </button>
+    </div>
+    <app-loading [showSpinner]="loading"/>
+</app-layout>

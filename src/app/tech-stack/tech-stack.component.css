@@ -1,0 +1,11 @@
+.tech {
+    @apply font-raleway font-semibold
+}
+
+.exp {
+    @apply font-raleway
+}
+
+.exp span {
+    @apply font-semibold
+}
